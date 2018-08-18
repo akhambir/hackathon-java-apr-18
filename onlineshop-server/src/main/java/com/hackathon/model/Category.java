@@ -26,15 +26,6 @@ public class Category {
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<Product> products = new ArrayList<>();
 
-    public Category() {
-    }
-
-    public Category(String name, String description, List<Product> products) {
-        this.name = name;
-        this.description = description;
-        this.products = products;
-    }
-
     public Long getId() {
         return id;
     }
