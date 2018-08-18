@@ -8,6 +8,7 @@ import {FormsModule} from '@angular/forms';
 import {UserService} from './services/user-service';
 import {RouterModule, Routes} from '@angular/router';
 import {CategoriesComponent} from './categories/categories.component';
+import { HeaderComponent } from './header/header.component';
 
 
 const appRoutes: Routes = [
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginUserComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    HeaderComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,
