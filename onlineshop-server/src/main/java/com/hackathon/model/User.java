@@ -7,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "USER")
 @Entity
+@Table(name = "USER")
 public class User {
 
     @Id
@@ -24,6 +24,17 @@ public class User {
     private String password;
     @Column(name = "TOKEN")
     private String token;
+
+    public User() {
+    }
+
+    public User(String firstName, String lastName, String email, String password, String token) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+        this.token = token;
+    }
 
     public Long getId() {
         return id;
