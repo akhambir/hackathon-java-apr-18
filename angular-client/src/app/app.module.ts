@@ -12,9 +12,8 @@ import { HeaderComponent } from './header/header.component';
 
 
 const appRoutes: Routes = [
-  { path: 'categories', component: CategoriesComponent },
+  { path: '', component: CategoriesComponent },
   { path: 'login', component: LoginUserComponent }
- /* { path: '', component: LoginUserComponent }*/
 ];
 
 @NgModule({
