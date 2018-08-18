@@ -7,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "PRODUCT")
 @Entity
+@Table(name = "PRODUCT")
 public class Product {
 
     @Id
@@ -18,7 +18,6 @@ public class Product {
     private String name;
     @Column(name = "PRICE")
     private Double price;
-
 
     public Long getId() {
         return id;

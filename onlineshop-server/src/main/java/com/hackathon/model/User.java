@@ -7,8 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Table(name = "USER")
 @Entity
+@Table(name = "USER")
 public class User {
 
     @Id
@@ -73,3 +73,4 @@ public class User {
         this.token = token;
     }
 }
+
