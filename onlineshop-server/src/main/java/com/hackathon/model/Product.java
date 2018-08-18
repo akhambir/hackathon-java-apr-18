@@ -1,5 +1,7 @@
 package com.hackathon.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -25,6 +27,7 @@ public class Product {
     private Double price;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_CATEGORY_ID")
+    @JsonIgnore
     private Category category;
 
     public Product() {
