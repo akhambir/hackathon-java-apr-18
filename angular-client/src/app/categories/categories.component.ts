@@ -1,5 +1,6 @@
-///<reference path="../../../node_modules/@angular/core/src/metadata/directives.d.ts"/>
 import { Component, OnInit } from '@angular/core';
+import {Category} from '../model/category';
+import {CategoryService} from '../services/category-service';
 
 @Component({
   selector: 'app-categories',
@@ -7,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  private categories: Array<Category> = [];
 
-  constructor() { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
+    this.getAllCategories();
   }
 
+  public getAllCategories(): void {
+    this.categoryService.getAllCategories()
+      .subscribe(
+        resp => this.categories = resp,
+        err => console.log('Category can not read')
+      );
+  }
 }
