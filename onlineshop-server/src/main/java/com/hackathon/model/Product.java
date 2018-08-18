@@ -1,16 +1,16 @@
 package com.hackathon.model;
 
-<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-=======
->>>>>>> 131dde60a073771eb19f590403a75996c8de11c2
-import javax.persistence.*;
+
 
 @Entity
 @Table(name = "PRODUCTS")
