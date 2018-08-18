@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "CATEGORIES")
+@Table(name = "SHOP.CATEGORIES")
 public class Category {
 
     @Id
@@ -25,15 +25,6 @@ public class Category {
     private String description;
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<Product> products = new ArrayList<>();
-
-    public Category() {
-    }
-
-    public Category(String name, String description, List<Product> products) {
-        this.name = name;
-        this.description = description;
-        this.products = products;
-    }
 
     public Long getId() {
         return id;
