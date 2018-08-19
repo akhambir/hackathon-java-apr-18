@@ -24,8 +24,8 @@ public class CategoryController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @RequestMapping(value = "/category/{id}", method = RequestMethod.GET)
-    public ResponseEntity<Category> getById(@PathVariable String id){
-        return categoryService.getById(Long.valueOf(id))
+    public ResponseEntity<Category> getById(@PathVariable Long id){
+        return categoryService.getById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(ResponseEntity.notFound()::build);
     }

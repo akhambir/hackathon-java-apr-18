@@ -12,8 +12,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-
-
 @Entity
 @Table(name = "PRODUCTS")
 public class Product {
@@ -25,19 +23,10 @@ public class Product {
     private String name;
     @Column(name = "PRICE")
     private Double price;
+    @JsonIgnore
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_CATEGORY_ID")
-    @JsonIgnore
     private Category category;
-
-    public Product() {
-    }
-
-    public Product(String name, Double price, Category category) {
-        this.name = name;
-        this.price = price;
-        this.category = category;
-    }
 
     public Category getCategory() {
         return category;
