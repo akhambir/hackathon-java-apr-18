@@ -9,11 +9,13 @@ import {UserService} from './services/user-service';
 import {RouterModule, Routes} from '@angular/router';
 import {CategoriesComponent} from './categories/categories.component';
 import { HeaderComponent } from './header/header.component';
+import { CategoryComponent } from './category/category.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: CategoriesComponent },
-  { path: 'login', component: LoginUserComponent }
+  { path: 'login', component: LoginUserComponent },
+  { path: 'category/:id', component: CategoryComponent }
 ];
 
 @NgModule({
@@ -21,7 +23,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginUserComponent,
     CategoriesComponent,
-    HeaderComponent
+    HeaderComponent,
+    CategoryComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,
