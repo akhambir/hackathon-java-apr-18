@@ -18,7 +18,8 @@ import { CartComponent } from './cart/cart.component';
 const appRoutes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'login', component: LoginUserComponent},
-  {path: 'category/:id', component: CategoryComponent}
+  {path: 'category/:id', component: CategoryComponent},
+  {path: 'cart', component:CartComponent}
 ];
 
 @NgModule({

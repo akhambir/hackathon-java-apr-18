@@ -2,6 +2,10 @@
   cart works!
 </p>
 
-<div *ngFor="let product of productList">
-  <h3>{{product.name}}   {{product.price}}</h3>
+<div *ngFor="let product of productList" (click)="onSelectProduct(product)">
+  <h3>{{product.name}}</h3>
 </div>
+
+<h2>
+  {{selectedProduct.price}}
+</h2>
