@@ -7,9 +7,17 @@ import {Category} from '../model/category';
   providedIn: 'root'
 })
 export class CategoryService {
+
   constructor(private http: HttpClient) {}
+
   public getAllCategories(): Observable<Array<Category>> {
     return this.http.get<Array<Category>>(
       'http://localhost:8080/categories', {observe: 'body'});
+  }
+
+  public getCategoryById(): Observable<Category> {
+    return this.http.get<Category>(
+      'http://localhost:8080/category/{id}', {observe: 'body'}
+    );
   }
 }

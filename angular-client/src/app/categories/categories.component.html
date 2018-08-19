@@ -1,12 +1,6 @@
-<base href="/categories">
-
-<p>
-  categories works!
-</p>
-
-<div *ngFor="let category of categories">
-  <h3>{{category.name}}</h3>
-
+<div style="width:800px; padding:200px; margin:0 auto;">
+  <a href="#" class="list-group-item list-group-item-action active">Choose category</a>
+  <div class="list-group" *ngFor="let c of categories">
+    <a href="/category/{{c.id}}" class="list-group-item list-group-item-action">{{c.name}}</a>
+  </div>
 </div>
-
-

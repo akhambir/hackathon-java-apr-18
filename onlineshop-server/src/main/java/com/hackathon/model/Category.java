@@ -25,8 +25,8 @@ public class Category {
     private String name;
     @Column(name = "DESCRIPTION")
     private String description;
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     @JsonIgnore
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<Product> products = new ArrayList<>();
 
     public Long getId() {
