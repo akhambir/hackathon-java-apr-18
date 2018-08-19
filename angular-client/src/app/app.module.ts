@@ -13,12 +13,14 @@ import { CategoryComponent } from './category/category.component';
 import {ProductService} from "./services/product-service.service";
 import {CategoryService} from "./services/category-service";
 import { CartComponent } from './cart/cart.component';
+import { ProductComponent } from './product/product.component';
 
 
 const appRoutes: Routes = [
   {path: '', component: CategoriesComponent},
   {path: 'login', component: LoginUserComponent},
-  {path: 'category/:id', component: CategoryComponent}
+  {path: 'category/:id', component: CategoryComponent},
+  {path: 'product/:id', component: ProductComponent}
 ];
 
 @NgModule({
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
     CategoriesComponent,
     CartComponent,
     HeaderComponent,
-    CategoryComponent
+    CategoryComponent,
+    ProductComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,

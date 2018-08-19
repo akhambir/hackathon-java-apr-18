@@ -15,13 +15,10 @@ export class CategoryComponent implements OnInit {
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log('ping0');
     this.getAllByCategoriesId(this.route.snapshot.paramMap.get('id'));
-    console.log('ping1');
   }
 
   public getAllByCategoriesId(id: string): void {
-    console.log('ping2');
     this.productService.getAllByCategoriesId(id)
       .subscribe(
         resp => this.products = resp,
