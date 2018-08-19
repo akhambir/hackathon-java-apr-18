@@ -26,8 +26,7 @@ const appRoutes: Routes = [
     AppComponent,
     LoginUserComponent,
     CategoriesComponent,
-    HeaderComponent,
-    CartComponent
+    CartComponent,
     HeaderComponent,
     CategoryComponent
   ],
@@ -38,7 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule
   ],
-  providers: [UserService, ProductService, CategoryService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
