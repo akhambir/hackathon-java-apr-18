@@ -62,5 +62,13 @@ export class CartComponent implements OnInit {
   onSelectProduct(product: Product): void {
     this.selectedProduct = product;
   }
+
+  deleteProduct(selectedProduct: Product) {
+    this.cartService.deleteProduct(selectedProduct);
+  }
+
+  buyAllProducts(productList: Array<Product>) {
+    this.cartService.buyAllProducts(productList);
+  }
 }
 

@@ -6,6 +6,10 @@
   <h3>{{product.name}}</h3>
 </div>
 
-<h2>
-  {{selectedProduct.price}}
-</h2>
+<h6>
+  <button (click)="deleteProduct(selectedProduct)">Delete product ({{selectedProduct.name}})</button>
+</h6>
+
+<h5>
+  <button (click)="buyAllProducts(productList)" >Buy all products</button>
+</h5>
