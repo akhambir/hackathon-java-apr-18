@@ -9,6 +9,7 @@ import {UserService} from './services/user-service';
 import {RouterModule, Routes} from '@angular/router';
 import {CategoriesComponent} from './categories/categories.component';
 import { HeaderComponent } from './header/header.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const appRoutes: Routes = [
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginUserComponent,
     CategoriesComponent,
-    HeaderComponent
+    HeaderComponent,
+    CartComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes,
