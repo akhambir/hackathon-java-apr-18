@@ -16,16 +16,20 @@ export class CartService {
 
   }
 
-  deleteProduct(selectedProduct: Product) {
+  deleteProduct(selectedProduct: Product): Observable<Product> {
     return this.http.post<Product>(
       'http://localhost:8080/deleteProduct', selectedProduct
     );
   }
 
   buyAllProducts(productList: Array<Product>) {
+    this.newPage();
     return this.http.post<Array<Product>>(
       'http://localhost:8080/deleteProduct', productList
     );
 
+  }
+
+  private newPage() {
   }
 }
