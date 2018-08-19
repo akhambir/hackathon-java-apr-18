@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { CategoryComponent } from './category/category.component';
 import {ProductService} from "./services/product-service.service";
 import {CategoryService} from "./services/category-service";
+import { CartComponent } from './cart/cart.component';
 
 
 const appRoutes: Routes = [
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
     AppComponent,
     LoginUserComponent,
     CategoriesComponent,
+    CartComponent,
     HeaderComponent,
     CategoryComponent
   ],
@@ -35,7 +37,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule
   ],
-  providers: [UserService, ProductService, CategoryService],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
