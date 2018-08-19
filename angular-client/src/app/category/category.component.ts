@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from "../model/product";
 import {ProductService} from "../services/product-service.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-category',
@@ -11,14 +12,17 @@ export class CategoryComponent implements OnInit {
 
   private products: Array<Product> = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.getAllByCategoriesId();
+    console.log('ping0');
+    this.getAllByCategoriesId(this.route.snapshot.paramMap.get('id'));
+    console.log('ping1');
   }
 
-  public getAllByCategoriesId(): void {
-    this.productService.getAllByCategoriesId()
+  public getAllByCategoriesId(id: string): void {
+    console.log('ping2');
+    this.productService.getAllByCategoriesId(id)
       .subscribe(
         resp => this.products = resp,
         err => console.log('Products not found')

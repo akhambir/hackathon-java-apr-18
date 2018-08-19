@@ -11,8 +11,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  public getAllByCategoriesId(): Observable<Array<Product>> {
-    return this.http.get<Array<Category>>(
-      'http://localhost:8080/products/categoryId/{id}', {observe: 'body'});
+  public getAllByCategoriesId(id: string): Observable<Array<Product>> {
+    return this.http.get<Array<Product>>(
+      'http://localhost:8080/products/categoryId/'.concat(id), {observe: 'body'});
   }
 }
