@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryService} from "../services/category-service";
-import {Category} from "../model/category";
+import {Product} from "../model/product";
+import {ProductService} from "../services/product-service.service";
 
 @Component({
   selector: 'app-category',
@@ -9,20 +9,21 @@ import {Category} from "../model/category";
 })
 export class CategoryComponent implements OnInit {
 
-  private category: Category;
+  private products: Array<Product> = [];
 
-
-  constructor(private categoryService: CategoryService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.getCategoryById();
+    this.getAllByCategoriesId();
   }
 
-  public getCategoryById(): void {
-    this.categoryService.getCategoryById()
+  public getAllByCategoriesId(): void {
+    this.productService.getAllByCategoriesId()
       .subscribe(
-        resp => this.category = resp,
-        err => console.log('Category not found')
+        resp => this.products = resp,
+        err => console.log('Products not found')
       );
   }
+
+
 }
