@@ -27,6 +27,8 @@ public class Product {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FK_CATEGORY_ID")
     private Category category;
+    @Column(name = "IMAGE")
+    private String image;
 
     public Category getCategory() {
         return category;
@@ -58,5 +60,13 @@ public class Product {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

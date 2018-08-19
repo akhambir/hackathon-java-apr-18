@@ -24,8 +24,6 @@ public class User {
     private String password;
     @Column(name = "TOKEN")
     private String token;
-    @Column(name = "IMAGE")
-    private String image;
 
     public User() {
     }
@@ -36,7 +34,6 @@ public class User {
         this.email = email;
         this.password = password;
         this.token = token;
-        this.image = image;
     }
 
     public Long getId() {
@@ -85,14 +82,6 @@ public class User {
 
     public void setToken(String token) {
         this.token = token;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
     }
 }
 
