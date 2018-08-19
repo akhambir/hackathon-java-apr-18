@@ -24,16 +24,19 @@ public class User {
     private String password;
     @Column(name = "TOKEN")
     private String token;
+    @Column(name = "IMAGE")
+    private String image;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, String email, String password, String token) {
+    public User(String firstName, String lastName, String email, String password, String token, String image) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.token = token;
+        this.image = image;
     }
 
     public Long getId() {
@@ -82,6 +85,14 @@ public class User {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }
 
